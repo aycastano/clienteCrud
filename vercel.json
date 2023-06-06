@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "petgram-django-crud-cliente",
+    
     "builds": [
         { "use": "@vercel/wsgi.py", 
            "src": "django-crud-cliente/seguros_cliente_crud_api/wsgi.py",
@@ -10,14 +11,8 @@
         {
             "src": "/(.*)",
             "dest": "django-crud-cliente/seguros_cliente_crud_api/wsgi.py"            
-        },
-        {
-            "src": "(.*).json",
-            "dest": "/$1.json"            
-        },
-        {
-            "src": "/.*",
-            "dest": "index.html"
         }
-    ]
+      
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 } 
