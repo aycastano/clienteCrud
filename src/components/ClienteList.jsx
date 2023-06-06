@@ -15,7 +15,7 @@ export function ClientesList(){
 
     loadclientes();
     },[])
-    return<div className='grid grid-cols-1 gap-3'>
+    return<div className='grid grid-cols-1 gap-3 ' >
         {clientes.map(clientes =>(
            <ClientesCards clientes={clientes} key={clientes.id
         }/>

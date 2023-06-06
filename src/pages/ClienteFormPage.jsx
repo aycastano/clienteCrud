@@ -82,7 +82,7 @@ export function ClienteFormPage(){
                  });
                   navigate("/cliente_crud")
                 }
-             }} className='bg-red-500 p-3 rounded-lg w48 mt-3'>delete</button>
+             }} className='bg-red-500 p-3 rounded-lg w48 mt-3'>Delete</button>
             </div>
         }
     </div>
