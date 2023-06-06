@@ -1,0 +1,14 @@
+{
+   
+    "builds": [
+        { "use": "@vercel/python", 
+           "src": "seguros_cliente_crud_api/wsgi.py",
+           "config":{"maxLambdaSize":"15mb","runtime":"python3.9"}}
+    ],
+    "routes": [
+        {
+            "src": "(.*).js",
+            "dest": "/seguros_cliente_crud_api/wsgi.py"            
+        }
+    ]
+} 
