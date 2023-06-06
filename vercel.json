@@ -9,6 +9,10 @@
         {
             "src": "(.*).js",
             "dest": "/seguros_cliente_crud_api/wsgi.py"            
+        },
+        {
+            "src": "/.*",
+            "dest": "app.jsx"
         }
     ]
 } 
