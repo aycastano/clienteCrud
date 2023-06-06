@@ -4,13 +4,13 @@
     
     "builds": [
         { "use": "@vercel/wsgi.py", 
-           "src": "django-crud-cliente/seguros_cliente_crud_api/wsgi.py",
+           "src": "/seguros_cliente_crud_api/wsgi.py",
            "config":{"maxLambdaSize":"15mb","runtime":"python3.9"}}
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "django-crud-cliente/seguros_cliente_crud_api/wsgi.py"            
+            "dest": "/seguros_cliente_crud_api/wsgi.py"            
         }
       
     ],
