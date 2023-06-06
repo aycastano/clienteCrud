@@ -1,18 +1,21 @@
 {
-   
+    "version": 2,
+    "name": "petgram-django-crud-cliente",
     "builds": [
-        { "use": "@vercel/python", 
-           "src": "seguros_cliente_crud_api/wsgi.py",
-           "config":{"maxLambdaSize":"15mb","runtime":"python3.9"}}
+        { "use": "@vercel/static-build", "src": "package.json"}
     ],
     "routes": [
         {
             "src": "(.*).js",
-            "dest": "/seguros_cliente_crud_api/wsgi.py"            
+            "dest": "/$1.js"            
+        },
+        {
+            "src": "(.*).json",
+            "dest": "/$1.json"            
         },
         {
             "src": "/.*",
-            "dest": "app.jsx"
+            "dest": "/cliente/index.html"
         }
     ]
 } 
